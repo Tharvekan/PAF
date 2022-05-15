@@ -1,0 +1,295 @@
+<!-- <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="ISO-8859-1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/universal_style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <title>Login Form</title>
+    <style type="text/css">
+      /*
+*
+* ==========================================
+* CUSTOM UTIL CLASSES
+* ==========================================
+*
+*/
+
+      .border-md {
+        border-width: 2px;
+      }
+
+      .btn-facebook {
+        background: #405d9d;
+        border: none;
+      }
+
+      .btn-facebook:hover,
+      .btn-facebook:focus {
+        background: #314879;
+      }
+
+      .btn-twitter {
+        background: #42aeec;
+        border: none;
+      }
+
+      .btn-twitter:hover,
+      .btn-twitter:focus {
+        background: #1799e4;
+      }
+
+      /*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+      body {
+        min-height: 100vh;
+      }
+
+      .form-control:not(select) {
+        padding: 1.5rem 0.5rem;
+      }
+
+      select.form-control {
+        height: 52px;
+        padding-left: 0.5rem;
+      }
+
+      .form-control::placeholder {
+        color: #ccc;
+        font-weight: bold;
+        font-size: 0.9rem;
+      }
+      .form-control:focus {
+        box-shadow: none;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar-->
+    <!--  -->
+
+    <div class="container">
+      <div class="row py-5 mt-4 align-items-center">
+        <!-- For Demo Purpose -->
+        <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+          <img
+            src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg"
+            alt=""
+            class="img-fluid mb-3 d-none d-md-block"
+          />
+          <h1>Create an Customer</h1>
+          <p class="font-italic text-muted mb-0">
+            Technology for managing all your company's relationships and interactions with customers and potential customers.
+          </p>
+        </div>
+
+        <!-- Registeration Form -->
+        <div class="col-md-7 col-lg-6 ml-auto">
+          <form action="#">
+            <div class="row">
+              <!-- First Name -->
+              <div class="input-group col-lg-6 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-user text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="cusId"
+                  type="text"
+                  name="cusId"
+                  placeholder="Customer Id"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+
+              <!-- Last Name -->
+              <div class="input-group col-lg-6 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-user text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="lastName"
+                  type="text"
+                  name="lastname"
+                  placeholder="Name"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+
+              <!-- Email Address -->
+              <div class="input-group col-lg-12 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-envelope text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Email Address"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+
+              <!-- Phone Number -->
+              <div class="input-group col-lg-12 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-phone-square text-muted"></i>
+                  </span>
+                </div>
+                <select
+                  id="countryCode"
+                  name="countryCode"
+                  style="max-width: 80px"
+                  class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted"
+                >
+                  <option value="">+12</option>
+                  <option value="">+10</option>
+                  <option value="">+15</option>
+                  <option value="">+18</option>
+                </select>
+                <input
+                  id="phoneNumber"
+                  type="tel"
+                  name="phone"
+                  placeholder="Telephone Number"
+                  class="form-control bg-white border-md border-left-0 pl-3"
+                />
+              </div>
+              .
+
+              <!-- address -->
+              <div class="input-group col-lg-12 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-envelope text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="Address"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+              <!-- distri -->
+              <div class="input-group col-lg-12 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-envelope text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="email"
+                  type="email"
+                  name="email"
+                  placeholder="District"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+              <!-- Password -->
+              <div class="input-group col-lg-6 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-lock text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="password"
+                  type="password"
+                  name="password"
+                  placeholder="Reading Current"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+
+              <!-- Password Confirmation -->
+              <div class="input-group col-lg-6 mb-4">
+                <div class="input-group-prepend">
+                  <span
+                    class="input-group-text bg-white px-4 border-md border-right-0"
+                  >
+                    <i class="fa fa-lock text-muted"></i>
+                  </span>
+                </div>
+                <input
+                  id="passwordConfirmation"
+                  type="text"
+                  name="passwordConfirmation"
+                  placeholder="NIC"
+                  class="form-control bg-white border-left-0 border-md"
+                />
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group col-lg-12 mx-auto mb-0">
+                <a href="#" class="btn btn-primary btn-block py-2">
+                  <span class="font-weight-bold">Create your Customer</span>
+                </a>
+              </div>
+
+              
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <script>
+            $(document).ready(// For Demo Purpose [Changing input group text on focus]
+      $(function () {
+          $('input, select').on('focus', function () {
+              $(this).parent().find('.input-group-text').css('border-color', '#80bdff');
+          });
+          $('input, select').on('blur', function () {
+              $(this).parent().find('.input-group-text').css('border-color', '#ced4da');
+          });
+      });
+      );
+    </script>
+  </body>
+</html>
